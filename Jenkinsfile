@@ -9,7 +9,11 @@ properties(
 )
 
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'docker-agent-ansible-python'
+        }
+    }
 
 
     stages {
