@@ -35,7 +35,11 @@ pipeline {
 
         stage('Bootstrap') {
             steps {
-                echo "Processed string in Stage 1: ${env.CUSTOMER}"
+                echo "Using the following strings from stage 1:"
+                echo "Customer: ${env.CUSTOMER}"
+                echo "Role: ${env.ROLE}"
+                echo "Name: ${env.NAME}"
+                echo "Domain: ${env.DOMAIN}"
                 // Use the processed string in Stage 2
                 script {
                     // Example: Send the string to another system
